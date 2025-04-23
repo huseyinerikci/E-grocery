@@ -4,12 +4,13 @@ import { Product } from "@/app/types";
 import React, { useState } from "react";
 import { FaMinus, FaPlus, FaShoppingCart, FaSpinner } from "react-icons/fa";
 import { toast } from "react-toastify";
+import { userId } from "@/app/utils/constants";
 
 const OrderButtons = ({ grocery }: { grocery: Product }) => {
   const [quantity, setQuantity] = useState(1);
   const [loading, setLoading] = useState(false);
   const [loadingBuy, setLoadingBuy] = useState(false);
-  const userId = "hsyn";
+
   const handleAddToCart = async () => {
     if (quantity < 1 || grocery.stock < quantity) return;
     setLoading(true);

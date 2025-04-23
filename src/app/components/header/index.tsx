@@ -4,8 +4,12 @@ import { FaShoppingCart } from "react-icons/fa";
 import { MdOutlineLocalGroceryStore } from "react-icons/md";
 import { RiFileList3Line } from "react-icons/ri";
 import SearchForm from "./SearchForm";
+import { getBasket } from "@/app/service/cart-service";
+import { userId } from "@/app/utils/constants";
 
-const Header = () => {
+const Header = async () => {
+  const { cart } = await getBasket(userId);
+
   return (
     <div className="bg-white flex justify-between items-center py-5 px-7 lg:py-6 lg:px-10 shadow-sm">
       <Link
@@ -30,7 +34,12 @@ const Header = () => {
           href="/cart"
           className="relative flex items-center gap-2 text-gray-700 hover:text-green-600 text-lg "
         >
-          <FaShoppingCart className="text-2xl" />
+          <div className="relative">
+            <FaShoppingCart className="text-2xl" />
+            <span className="absolute -top-5 -right-5 size-6 grid place-items-center text-sm bg-green-500 font-bold text-white rounded-full shadow-sm">
+              {cart.items.length}
+            </span>
+          </div>
           <span className="max-md:hidden">Sepetim</span>
         </Link>
       </div>

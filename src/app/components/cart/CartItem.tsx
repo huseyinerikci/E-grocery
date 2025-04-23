@@ -33,9 +33,7 @@ const CartItem = ({ item }: CartItemProps) => {
           {item.name}
         </Link>
 
-        <p className="text-gray-600 text-sm">
-          {item.quantity} {item.grocery.unit}
-        </p>
+        <p className="text-gray-600 text-sm">{item.grocery.unit}</p>
         <p className="text-green-600 font-medium">{item.price}₺</p>
       </div>
 

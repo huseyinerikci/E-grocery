@@ -1,11 +1,16 @@
 import CartItem from "@/app/components/cart/CartItem";
+import CartSummary from "@/app/components/cart/CartSummary";
 import ClearBtn from "@/app/components/cart/ClearBtn";
+import EmptyCart from "@/app/components/cart/EmptyCart";
 import { getBasket } from "@/app/service/cart-service";
+import { userId } from "@/app/utils/constants";
 
 const Cart = async () => {
-  const userId = "hsyn";
   const { cart } = await getBasket(userId);
-  console.log(cart);
+
+  if (!cart || cart.items.length === 0) {
+    return <EmptyCart />;
+  }
   return (
     <div className="container mx-auto px-4 py-8">
       <h1 className="text-2xl font-bold text-gray-800 mb-6">
@@ -19,6 +24,7 @@ const Cart = async () => {
               <h2 className="text-lg font-semibold">
                 Sepetiniz ({cart.items.length} ürün)
               </h2>
+
               <ClearBtn />
             </div>
 
@@ -29,6 +35,7 @@ const Cart = async () => {
             </ul>
           </div>
         </div>
+        <CartSummary cart={cart} />
       </div>
     </div>
   );
