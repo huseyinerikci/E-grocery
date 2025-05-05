@@ -49,7 +49,7 @@ const ItemActions = ({ item }: CartItemProps) => {
         </span>
 
         <button
-          disabled={item.quantity === item.grocery.stock || isLoading}
+          disabled={item.quantity === item.grocery?.stock || isLoading}
           onClick={() => handleUpdateQuantity(item.quantity + 1)}
           className="px-2 py-2 text-gray-600 hover:bg-gray-200 transition disabled:opacity-50 cursor-pointer"
         >
