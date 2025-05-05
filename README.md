@@ -1,36 +1,44 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# 🥦 E-Grocery Project
+This project is a modern e-grocery shopping application developed using Next.js, TypeScript and Tailwind CSS. Users can view products by category, add products to their carts and proceed to the payment step.
 
-## Getting Started
+## 📸 Preview
 
-First, run the development server:
+A preview of my e-grocery project is in the gif below.
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
+![grocery](https://github.com/user-attachments/assets/579664fd-9218-4187-a699-3b6691be159d)
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+## 🚀 Features
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+🧺 Filter products by category and press on the screen
 
-## Learn More
+➕ Add products to the cart
 
-To learn more about Next.js, take a look at the following resources:
+🔄 Increase/decrease the number of products in the cart
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+🗑️ Clear the cart completely
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+💰 Show the total amount in the cart
 
-## Deploy on Vercel
+💳 Test payment with Stripe
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+🔔 Toastify notifications for product addition/deletion transactions
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+🎨 Stylish icons with React Icons
+
+📱 100% mobile compatible and responsive design
+
+## 🛠️ Technologies
+
+* Next.js
+
+* TypeScript
+
+* Tailwind CSS
+
+* Stripe (For payment transactions)
+
+* React Toastify
+
+* React Icons
+
